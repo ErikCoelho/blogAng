@@ -1,0 +1,50 @@
+.navbar {
+    background-color: #00ABB3;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.homeLogo {
+    float: left;
+    font-size: 45px;
+    padding: 0px 15px;
+}
+
+.homeLogo>a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+nav.desktop {
+    float: right;
+}
+
+nav.desktop ul {
+    list-style-type: none;
+}
+
+nav.desktop li {
+    display: inline-block;
+    margin: 15px 20px;
+}
+
+nav.desktop li a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+nav.desktop li a:hover {
+    color: #c7cccc;
+}
+
+li a .selected {
+    color: #3C4048 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
