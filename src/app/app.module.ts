@@ -12,6 +12,8 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     PostsComponent,
     HomeComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoriesComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

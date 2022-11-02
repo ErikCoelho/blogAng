@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
 })
+
 export class AppComponent implements OnInit {
   constructor(
     private afAuth: AngularFireAuth,
