@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +25,7 @@ export class LoginComponent implements OnInit {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
         const user = result.user;
-        console.log(user);
+        console.log(token);
         // ...
       }).catch((error) => {
         // Handle Errors here.

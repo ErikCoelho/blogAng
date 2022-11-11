@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NewPostComponent } from './pages/new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,14 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     LoginComponent,
     ProfileComponent,
     CategoriesComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
   ],

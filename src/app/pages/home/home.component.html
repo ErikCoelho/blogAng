@@ -1,3 +1,16 @@
 <app-navbar></app-navbar>
-<app-posts></app-posts>
+<section class="posts">
+    <div class="container">
+        <div class="flex-posts">
+            <div class="space-posts" *ngFor="let post of posts">
+                <div class="box-posts">
+                    <img src="{{post.imageUrl}}">
+                    <div class="box-posts-wraper">
+                        <h2>{{ post.title}}</h2>
+                    </div> <!-- box-posts-wraper -->
+                </div> <!-- box-posts -->
+            </div> <!-- space-posts -->
+        </div><!-- flex-posts -->
+    </div><!-- container -->
+</section><!-- posts -->
 <router-outlet></router-outlet>

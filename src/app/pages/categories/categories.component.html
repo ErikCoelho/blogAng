@@ -1,1 +1,15 @@
 <app-navbar></app-navbar>
+
+<section class="categories">
+    <div class="container">
+        <div class="flex-categories">
+            <div class="space-categories" *ngFor="let category of categories">
+                <div class="box-categories">
+                    <div class="box-categories-wraper">
+                        <a (click)="getPost(category.id)">{{category.name}}</a>
+                    </div><!-- box-categories-wraper -->
+                </div> <!-- box-categories -->
+            </div> <!-- space-categories -->
+        </div><!-- flex-categories -->
+    </div><!-- container -->
+</section><!-- categories -->
