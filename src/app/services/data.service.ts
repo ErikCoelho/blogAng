@@ -12,7 +12,6 @@ export class DataService {
   ) {
   }
 
-
   public composeHeaders(token: string) {
     if (token) {
       const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
@@ -48,8 +47,6 @@ export class DataService {
       })
     });
   }
-
-
 
   // public post(data: any, token: string) {
   //   return this.http.post(`${this.baseUrl}/v1/posts`, data, { headers: HttpHeaders.arguments(this.composeHeaders(token)) });

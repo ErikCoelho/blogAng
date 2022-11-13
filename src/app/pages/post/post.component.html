@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="post" *ngIf="post">
+        <img src="{{post.imageUrl}}">
+        <h1>{{post.title}}</h1>
+        <p>{{post.body}}</p>
+
+    </div><!-- post -->
+</div><!-- container -->

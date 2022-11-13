@@ -16,7 +16,7 @@
                 <div class="box-posts">
                     <img src="{{post.imageUrl}}">
                     <div class="box-posts-wraper">
-                        <h2>{{post.title}}</h2>
+                        <a [routerLink]="['/post/', post.id]">{{post.title}}</a>
                     </div> <!-- box-posts-wraper -->
                 </div> <!-- box-posts -->
             </div> <!-- space-posts -->

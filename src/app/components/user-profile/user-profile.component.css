@@ -34,7 +34,7 @@ section.posts>.container {
     padding: 30px;
 }
 
-.box-posts-wraper h2 {
+.box-posts-wraper a {
     color: #31475e;
     font-size: 20px;
     font-weight: normal;
@@ -48,11 +48,11 @@ section.posts>.container {
     font-size: 15px;
 }
 
-.box-posts-wraper a {
+/* .box-posts-wraper a {
     display: inline-block;
     border: 1px solid #6a7c92;
     color: #6a7c92;
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 20px;
-}
+} */

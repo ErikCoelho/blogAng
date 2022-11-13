@@ -16,7 +16,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NewPostComponent } from './pages/new-post/new-post.component';
+import { NewPostComponent } from './components/new-post/new-post.component';
+import { PostComponent } from './pages/post/post.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NewPostComponent } from './pages/new-post/new-post.component';
     ProfileComponent,
     CategoriesComponent,
     UserProfileComponent,
-    NewPostComponent
+    NewPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
