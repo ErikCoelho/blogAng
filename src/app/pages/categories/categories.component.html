@@ -4,11 +4,9 @@
     <div class="container">
         <div class="flex-categories">
             <div class="space-categories" *ngFor="let category of categories">
-                <div class="box-categories">
-                    <div class="box-categories-wraper">
-                        <a (click)="getPost(category.id)">{{category.name}}</a>
-                    </div><!-- box-categories-wraper -->
-                </div> <!-- box-categories -->
+                <div class="box-categories-wraper">
+                    <a [routerLink]="['/post/category', category.id]">{{category.name}}</a>
+                </div><!-- box-categories-wraper -->
             </div> <!-- space-categories -->
         </div><!-- flex-categories -->
     </div><!-- container -->

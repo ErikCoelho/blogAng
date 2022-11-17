@@ -14,7 +14,12 @@ export class DataService {
 
   public composeHeaders(token: string) {
     if (token) {
-      const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+      // const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      })
+
       return headers;
     }
     else {
@@ -25,6 +30,10 @@ export class DataService {
   public getCategories() {
     return this.http.get(`${this.baseUrl}/v1/categories`);
 
+  }
+
+  public getCategoryById(id: any) {
+    return this.http.get(`${this.baseUrl}/v1/categories/${id}`);
   }
 
   public getPost() {
@@ -48,7 +57,12 @@ export class DataService {
     });
   }
 
-  // public post(data: any, token: string) {
-  //   return this.http.post(`${this.baseUrl}/v1/posts`, data, { headers: HttpHeaders.arguments(this.composeHeaders(token)) });
-  // }
+  public post(data: any, token: any) {
+    return this.http.post(`${this.baseUrl}/v1/posts`, data, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      })
+    });
+  }
 }

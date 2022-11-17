@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +16,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NewPostComponent } from './components/new-post/new-post.component';
 import { PostComponent } from './pages/post/post.component';
+import { PostCategoryComponent } from './pages/post-category/post-category.component';
+import { FormPostComponent } from './components/form-post/form-post.component';
+import { WritePostComponent } from './pages/write-post/write-post.component';
 
 @NgModule({
   declarations: [
@@ -30,16 +32,20 @@ import { PostComponent } from './pages/post/post.component';
     ProfileComponent,
     CategoriesComponent,
     UserProfileComponent,
-    NewPostComponent,
-    PostComponent
+    PostComponent,
+    PostCategoryComponent,
+    FormPostComponent,
+    WritePostComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

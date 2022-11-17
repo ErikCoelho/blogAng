@@ -1,12 +1,11 @@
 <section class="posts">
     <div class="container">
         <div class="flex-posts">
-            <div class="space-posts">
-                <div class="box-posts">
-                    <img src="./assets\Batman.png">
+            <div class="space-posts" *ngFor="let post of posts">
+                <div class="box-posts" [routerLink]="['/post/', post.id]">
+                    <img src="{{post.imageUrl}}">
                     <div class="box-posts-wraper">
-                        <h2>Titulo notícia</h2>
-                        <a href="#">Ler matéria</a>
+                        <h2>{{post.title}}</h2>
                     </div> <!-- box-posts-wraper -->
                 </div> <!-- box-posts -->
             </div> <!-- space-posts -->

@@ -1,21 +1,6 @@
-<div class="user-card">
-    <div class="container">
-        <img src="{{user.image}}" class="user-image" alt="Imagem do Usuário">
-        <h1>{{user.name}}</h1>
-        <button (click)="logout()">Sair</button>
-    </div>
-</div>
-<br>
-
-<hr>
-
+<app-navbar></app-navbar>
 <section class="posts">
     <div class="container">
-        <h1>Publicações</h1>
-        <button id="newPostButton" [routerLink]="['/write-post']">Nova publicação</button>
-        <div class="noResult" *ngIf="!posts">
-            <h1>Sem publicações</h1>
-        </div>
         <div class="flex-posts">
             <div class="space-posts" *ngFor="let post of posts">
                 <div class="box-posts" [routerLink]="['/post/', post.id]">

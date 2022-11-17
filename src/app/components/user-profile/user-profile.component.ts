@@ -12,7 +12,6 @@ export class UserProfileComponent implements OnInit {
   public user: any = {
     image: "",
     name: "",
-    email: "",
   }
 
   public posts: any;
@@ -27,7 +26,6 @@ export class UserProfileComponent implements OnInit {
       if (data) {
         this.user.name = data?.displayName;
         this.user.image = data?.photoURL;
-        this.user.email = data?.email;
         this.getUserPost();
       }
     });
@@ -35,14 +33,12 @@ export class UserProfileComponent implements OnInit {
 
   logout() {
     this.afAuth.signOut();
-
   }
 
   getUserPost() {
     this.afAuth.idToken.subscribe(token => {
       this.service.getPostByUser(token).subscribe((data: any) => {
         this.posts = data.data;
-        console.log(data.data);
       });
     });
   }
