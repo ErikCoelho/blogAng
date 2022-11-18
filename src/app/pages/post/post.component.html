@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <div class="post" *ngIf="post">
-    <img src="{{post.imageUrl}}">
     <div class="container-post">
+        <h4>Noticia</h4> > <h3 *ngIf="category">{{category.name}}</h3>
         <h1>{{post.title}}</h1>
-        <h3 *ngIf="category">{{category.name}}</h3>
-        <h3 *ngIf="datePost">{{datePost}}</h3>
-        <p>{{post.body}}</p>
+        <h6 *ngIf="datePost">{{datePost}}</h6>
+        <img src="{{post.imageUrl}}">
+        <h5>{{post.body}}</h5>
     </div>
 </div><!-- post -->

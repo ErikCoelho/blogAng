@@ -15,13 +15,10 @@ export class CategoriesComponent implements OnInit {
   ngOnInit() {
     this.service.getCategories().subscribe((data: any) => {
       this.categories = data.data;
-      console.log(data.data);
     });
   }
 
   getPost(id: any) {
-    this.service.getPostByCategory(id).subscribe((data: any) => {
-      console.log(data.data);
-    });
+    this.service.getPostByCategory(id).subscribe();
   }
 }

@@ -56,7 +56,6 @@ export class FormPostComponent implements OnInit {
   getCategories() {
     this.service.getCategories().subscribe((data: any) => {
       this.categories = data.data;
-      console.log(data.data);
     });
   }
 

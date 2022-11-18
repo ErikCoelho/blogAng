@@ -38,7 +38,6 @@ export class PostComponent implements OnInit {
 
   formatDate() {
     const date = new Date(this.post.lastUpdateDate);
-    console.log(date);
     const formatter = new Intl.DateTimeFormat('pt-BR', {
       day: 'numeric',
       hour: 'numeric',

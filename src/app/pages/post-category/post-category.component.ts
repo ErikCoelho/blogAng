@@ -22,7 +22,6 @@ export class PostCategoryComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get("id"));
     this.service.getPostByCategory(id).subscribe((data: any) => {
       this.posts = data.data;
-      console.log(data.data);
     });
   }
 
