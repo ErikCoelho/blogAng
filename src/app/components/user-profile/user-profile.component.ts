@@ -25,7 +25,7 @@ export class UserProfileComponent implements OnInit {
     this.afAuth.user.subscribe((data) => {
       if (data) {
         this.user.name = data?.displayName;
-        this.user.image = data?.photoURL;
+        this.user.image = data.photoURL;
         this.getUserPost();
       }
     });
